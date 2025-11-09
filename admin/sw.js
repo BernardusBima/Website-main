@@ -1,8 +1,7 @@
-// Tentukan nama cache
-const CACHE_NAME = 'netlify-cms-pwa-v1';
+// Tentukan nama cache (VERSI DIPERBARUI)
+const CACHE_NAME = 'netlify-cms-pwa-v2';
 
 // Daftar file inti yang harus di-cache (App Shell)
-// Ini adalah file dari index.html Anda + config.yml yang penting
 const URLS_TO_CACHE = [
   './', // Ini akan merujuk ke 'admin/index.html'
   './config.yml',
@@ -15,7 +14,7 @@ self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
-        console.log('Cache dibuka, menambahkan file inti...');
+        console.log('Cache dibuka (v2), menambahkan file inti...');
         return cache.addAll(URLS_TO_CACHE);
       })
       .then(() => self.skipWaiting()) // Memaksa service worker baru untuk aktif
@@ -28,6 +27,7 @@ self.addEventListener('activate', event => {
     caches.keys().then(cacheNames => {
       return Promise.all(
         cacheNames.map(cacheName => {
+          // Hapus cache APAPUN yang BUKAN 'v2'
           if (cacheName !== CACHE_NAME) {
             console.log('Menghapus cache lama:', cacheName);
             return caches.delete(cacheName);
@@ -51,21 +51,15 @@ self.addEventListener('fetch', event => {
         // Jika tidak ada di cache, ambil dari jaringan
         return fetch(event.request).then(
           networkResponse => {
-            // Cek apakah respons valid
+            // (Logika fetch tetap sama)
             if (!networkResponse || networkResponse.status !== 200 || networkResponse.type !== 'basic') {
-              // Hati-hati: Kita tidak men-cache aset dari unpkg/identity (non-basic)
-              // kecuali saat instalasi awal.
               return networkResponse;
             }
-
-            // Simpan respons ke cache untuk lain kali
-            // (Kita kloning respons karena akan digunakan)
             const responseToCache = networkResponse.clone();
             caches.open(CACHE_NAME)
               .then(cache => {
                 cache.put(event.request, responseToCache);
               });
-
             return networkResponse;
           }
         );
