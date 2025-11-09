@@ -1,0 +1,41 @@
+---
+layout: "layout.njk"
+---
+<article class="article-detail-page">
+    <div class="container">
+        
+        <header class="article-header">
+            <span class="article-category">{{ category }}</span>
+            <h1>{{ title }}</h1>
+            <div class="meta">
+                <span>Oleh: <strong>{{ author or "Tim LBH" }}</strong></span> • 
+                <span>{{ date | postDate }}</span>
+            </div>
+        </header>
+        
+        <img src="{{ thumbnail }}" alt="Gambar utama untuk {{ title }}" class="main-image">
+        
+        <div class="content">
+             {{ content | safe }}
+        </div>
+
+        <div class="article-share">
+            <h3>Bagikan Artikel Ini:</h3>
+            <div class="share-buttons">
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ meta.url }}{{ page.url }}" target="_blank" rel="noopener" aria-label="Bagikan ke Facebook" class="share-facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/intent/tweet?url={{ meta.url }}{{ page.url }}&text={{ title }}" target="_blank" rel="noopener" aria-label="Bagikan ke X" class="share-twitter-x">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?text={{ title }}%20{{ meta.url }}{{ page.url }}" target="_blank" rel="noopener" aria-label="Bagikan ke WhatsApp" class="share-whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+
+        <footer class="article-footer">
+            <a href="/artikel/" class="btn btn-secondary">← Kembali ke Semua Artikel</a>
+        </footer>
+    </div>
+</article>

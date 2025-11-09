@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Perjanjian pra-nikah bukan lagi hal tabu, melainkan langkah bijak untuk melindungi aset dan mencegah konflik finansial di masa depan.">
+    <meta name="keywords" content="Perjanjian Pra-Nikah, Aset, Harta Gono-Gini, Hukum Perdata, Notaris">
+    
+    <title>Pentingnya Perjanjian Pra-Nikah untuk Melindungi Aset Anda - LBH Ratu Adil Semarang</title>
+    
+    <link rel="icon" href="assets/images/Logo.png" type="image/png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #1a2a4a;
+            --secondary-color: #D4AF37;
+            --dark-color: #111827;
+            --light-color: #ffffff;
+            --gray-color: #f9fafb;
+            --text-light: #6b7280;
+            --footer-text-color: #adb5bd;
+            --whatsapp-color: #25D366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        body.nav-open { overflow: hidden; }
+        .container { max-width: 1140px; margin: auto; padding: 0 1.5rem; }
+        h1, h2, h3 { font-weight: 700; line-height: 1.3; }
+
+         /* HEADER */
+         .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: padding 0.3s ease;
+        }
+        
+        .header.scrolled {
+            padding: 0.8rem 0;
+        }
+        
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        
+        .header .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .header .logo img {
+            height: 42px;
+            margin-right: .8rem;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            font-weight: 700;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-links li {
+            margin-left: 1.8rem;
+        }
+        
+        .nav-links a {
+            color: var(--dark-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color .3s;
+            position: relative;
+            padding: 5px 0;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-nav-toggle {
+            display: none;
+            font-size: 1.8rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        /* FOOTER */
+        .footer { background: var(--primary-color); color: var(--footer-text-color); padding: 5rem 0 2rem; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 4rem; }
+        .footer-col h3 { color: var(--light-color); margin-bottom: 1.5rem; font-size: 1.1rem; }
+        .footer-col p { margin-bottom: 1rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: .8rem; }
+        .footer-col a { color: var(--footer-text-color); text-decoration: none; transition: .3s; }
+        .footer-col a:hover { color: var(--secondary-color); }
+        .footer-col .contact-item { display: flex; align-items: center; margin-bottom: .8rem; }
+        .footer-col .contact-item i { margin-right: .8rem; color: var(--secondary-color); }
+        .footer-socials a { font-size: 1.5rem; margin-right: 1rem; }
+        .footer-bottom { text-align: center; border-top: 1px solid #3a5074; padding-top: 2rem; font-size: .9rem; opacity: 0.7; }
+
+        /* WHATSAPP FLOAT BUTTON */
+        .whatsapp-float {
+            position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px;
+            background-color: var(--whatsapp-color); color: #FFF; border-radius: 50px;
+            text-align: center; font-size: 30px; box-shadow: 2px 2px 3px #999;
+            z-index: 100; display: flex; align-items: center; justify-content: center;
+            text-decoration: none; transition: transform 0.3s ease;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+
+        /* STYLE KHUSUS HALAMAN DETAIL ARTIKEL */
+        main { padding-top: 8rem; padding-bottom: 6rem; }
+        .article-container { max-width: 800px; margin: 0 auto; }
+        .article-header { text-align: center; margin-bottom: 3rem; }
+        .article-category {
+            display: inline-block; padding: .25rem .75rem; background-color: #eef2ff;
+            color: var(--primary-color); border-radius: 50px; font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem;
+        }
+        .article-header h1 { font-size: 2.8rem; color: var(--primary-color); margin-bottom: 1rem; }
+        .article-meta { color: var(--text-light); font-size: 0.95rem; }
+        .article-meta span { margin: 0 0.5rem; }
+        .article-featured-image { width: 100%; height: auto; max-height: 450px; object-fit: cover; border-radius: 12px; margin-bottom: 3rem; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .article-content { font-size: 1.1rem; color: var(--dark-color); }
+        .article-content h2 { font-size: 1.8rem; color: var(--primary-color); margin-top: 2.5rem; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid #e5e7eb; }
+        .article-content h3 { font-size: 1.4rem; color: var(--primary-color); margin-top: 2rem; margin-bottom: 1rem; }
+        .article-content p { margin-bottom: 1.5rem; }
+        .article-content ul { list-style-position: inside; padding-left: 1rem; margin-bottom: 1.5rem; }
+        .article-content blockquote { border-left: 4px solid var(--secondary-color); padding-left: 1.5rem; margin: 2rem 0; font-style: italic; color: var(--text-light); }
+        
+        /* TOMBOL SHARE */
+        .article-share {
+            margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e5e7eb;
+            display: flex; align-items: center; flex-wrap: wrap; gap: 1rem;
+        }
+        .article-share h3 { font-size: 1.1rem; color: var(--primary-color); margin-right: 1rem; }
+        .share-buttons { display: flex; gap: 0.75rem; }
+        .share-btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+            padding: 0.5rem 1rem; border-radius: 50px; text-decoration: none; color: var(--light-color);
+            font-weight: 500; font-size: 0.9rem; transition: opacity 0.3s;
+        }
+        .share-btn:hover { opacity: 0.85; }
+        .share-btn i { font-size: 1.1rem; }
+        .share-btn.facebook { background-color: #1877F2; }
+        .share-btn.twitter { background-color: #14171A; }
+        .share-btn.whatsapp { background-color: var(--whatsapp-color); }
+        .share-btn.copy-link { background-color: var(--text-light); cursor: pointer; border: none; font-family: 'Poppins', sans-serif;}
+
+        .back-to-articles { display: inline-block; margin-top: 2rem; color: var(--primary-color); text-decoration: none; font-weight: 600; transition: color 0.3s; }
+        .back-to-articles:hover { color: var(--secondary-color); }
+
+        /* RESPONSIVE */
+        @media(max-width: 992px) {
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        
+        @media(max-width: 768px) {
+            .nav-links {
+                position: fixed; top: 0; right: -100%; width: 70%; height: 100vh; background: var(--dark-color);
+                flex-direction: column; justify-content: center; align-items: center;
+                transition: .5s cubic-bezier(0.77, 0, 0.175, 1); box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+                z-index: 1002; gap: 1.5rem;
+            }
+            .nav-links.active { right: 0; }
+            .nav-links a { color: var(--light-color); font-size: 1.2rem; }
+            .nav-links a::after { background: var(--secondary-color); }
+            .mobile-nav-toggle { display: block; z-index: 1003; position: relative; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .whatsapp-float { width: 50px; height: 50px; right: 20px; bottom: 20px; }
+            main { padding-top: 6rem; }
+            .article-header h1 { font-size: 2.2rem; }
+            .article-content { font-size: 1rem; }
+            .article-share { flex-direction: column; align-items: flex-start; }
+            .share-btn { padding: 0; width: 44px; height: 44px; border-radius: 50%; }
+            .share-btn span { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.jpg" alt="Logo LBH">
+                <div class="logo-text">
+                    Lembaga Bantuan Hukum
+                    <span>Ratu Adil Semarang</span>
+                </div>
+            </a>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html#tentang-kami">Tentang</a></li>
+                    <li><a href="index.html#keunggulan">Keunggulan</a></li>
+                    <li><a href="index.html#area-praktik">Area Praktik</a></li>
+                    <li><a href="index.html#tim-kami">Tim Kami</a></li>
+                    <li><a href="artikel.html">Artikel</a></li>
+                    <li><a href="index.html#testimonial">Testimoni</a></li>
+                    <li><a href="index.html#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <article class="article-container">
+                <header class="article-header">
+                    <span class="article-category">Hukum Perdata</span>
+                    <h1 id="articleTitle">Pentingnya Perjanjian Pra-Nikah untuk Melindungi Aset Anda</h1>
+                    <div class="article-meta">Oleh Tim LBH Ratu Adil <span>&bull;</span> 18 September 2025</div>
+                </header>
+                
+                <img src="https://images.unsplash.com/photo-1589417353569-2a4678b7e6e4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyamFuamlhbiUyMHByYSUyMG5pa2FofGVufDB8fDB8fHww" alt="Pasangan menandatangani dokumen perjanjian" class="article-featured-image">
+
+                <div class="article-content">
+                    <p>Membicarakan <b>Perjanjian Pra-Nikah (prenuptial agreement)</b> di Indonesia seringkali masih dianggap tabu. Banyak yang merasa hal ini menandakan ketidakpercayaan terhadap pasangan atau seolah-olah merencanakan perceraian sebelum pernikahan dimulai. Padahal, perjanjian pra-nikah adalah instrumen hukum yang bijak dan merupakan bentuk perencanaan finansial yang matang untuk melindungi kedua belah pihak.</p>
+                    
+                    <h2>Mengapa Perjanjian Pra-Nikah Penting?</h2>
+                    <p>Menurut Undang-Undang Perkawinan di Indonesia, harta yang diperoleh selama masa perkawinan akan menjadi harta bersama (gono-gini). Tanpa perjanjian pra-nikah, pembagian harta ini bisa menjadi sangat rumit jika terjadi hal-hal yang tidak diinginkan, seperti perceraian atau kematian.</p>
+                    
+                    <blockquote>"Perjanjian pra-nikah bukanlah tentang kurangnya cinta, melainkan tentang adanya kejelasan dan perlindungan hukum bagi masa depan bersama."</blockquote>
+                    
+                    <h3>1. Pemisahan Harta yang Jelas</h3>
+                    <p>Dengan perjanjian pra-nikah, pasangan dapat menentukan bahwa harta yang mereka peroleh selama pernikahan tetap menjadi milik masing-masing (pemisahan harta). Ini sangat penting terutama jika salah satu atau kedua pasangan adalah pengusaha, memiliki aset signifikan sebelum menikah, atau akan menerima warisan besar.</p>
+                    
+                    <h3>2. Perlindungan dari Utang Pasangan</h3>
+                    <p>Salah satu manfaat terbesar adalah perlindungan dari utang. Jika pasangan Anda memiliki atau membuat utang atas namanya sendiri (misalnya utang bisnis), aset pribadi Anda tidak dapat disita untuk melunasi utang tersebut. Tanpa perjanjian ini, utang yang dibuat selama pernikahan bisa menjadi tanggung jawab bersama.</p>
+                    
+                    <h3>3. Mencegah Konflik di Masa Depan</h3>
+                    <p>Dengan mendiskusikan dan menyetujui masalah finansial secara terbuka sebelum menikah, pasangan membangun fondasi transparansi dan komunikasi. Ini justru dapat mencegah konflik yang lebih besar di kemudian hari terkait masalah uang dan aset.</p>
+                    
+                    <h2>Bagaimana Proses Pembuatannya?</h2>
+                    <p>Proses pembuatan perjanjian pra-nikah harus dilakukan secara resmi agar memiliki kekuatan hukum. Berikut adalah langkah-langkahnya:</p>
+                    <ul>
+                        <li><strong>Dibuat Secara Tertulis:</strong> Perjanjian harus dalam bentuk tulisan dan disetujui oleh kedua calon mempelai.</li>
+                        <li><strong>Dilegalisasi oleh Notaris:</strong> Perjanjian ini harus dibuat dalam bentuk akta notaris agar sah secara hukum.</li>
+                        <li><strong>Dicatatkan:</strong> Akta tersebut wajib dicatatkan di Kantor Urusan Agama (KUA) bagi yang beragama Islam, atau di Dinas Kependudukan dan Pencatatan Sipil (Disdukcapil) bagi non-muslim.</li>
+                    </ul>
+
+                    <h2>Kesimpulan</h2>
+                    <p>Melihat perjanjian pra-nikah sebagai alat perencanaan adalah cara pandang yang modern dan cerdas. Ini adalah tentang menciptakan kejelasan, melindungi aset yang telah Anda bangun, dan membangun pernikahan di atas fondasi finansial yang kokoh dan transparan. Jika Anda mempertimbangkan untuk membuat perjanjian pra-nikah, berkonsultasi dengan ahli hukum adalah langkah pertama yang sangat bijaksana untuk memastikan semua aspek hukum terpenuhi.</p>
+                </div>
+
+                <div class="article-share">
+                    <h3>Bagikan:</h3>
+                    <div class="share-buttons">
+                        <a href="#" class="share-btn facebook" id="shareFacebook" target="_blank" rel="noopener noreferrer" aria-label="Bagikan ke Facebook">
+                            <i class="fab fa-facebook-f"></i> <span>Facebook</span>
+                        </a>
+                        <a href="#" class="share-btn twitter" id="shareTwitter" target="_blank" rel="noopener noreferrer" aria-label="Bagikan ke X">
+                            <i class="fab fa-x-twitter"></i> <span>X Twitter</span>
+                        </a>
+                        <a href="#" class="share-btn whatsapp" id="shareWhatsapp" target="_blank" rel="noopener noreferrer" aria-label="Bagikan ke WhatsApp">
+                            <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
+                        </a>
+                        <button class="share-btn copy-link" id="copyLinkBtn">
+                            <i class="fas fa-link"></i> <span id="copyLinkText">Salin Link</span>
+                        </button>
+                    </div>
+                </div>
+                <a href="artikel.html" class="back-to-articles">&larr; Kembali ke Daftar Artikel</a>
+            </article>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>LEMBAGA BANTUAN HUKUM<br>RATU ADIL SEMARANG</h3>
+                    <p>
+                        Kami adalah lembaga hukum yang berdedikasi untuk 
+                        memberikan layanan hukum dengan profesional, kompeten, solutif dan amanah.
+                    </p>
+    
+                    <h3>Alamat</h3>
+                    <p>
+                        <strong>Kantor Pusat:</strong><br>
+                        Jl. Peres No.209, Kuningan, Semarang Utara, Kota Semarang, Jawa Tengah 50172
+                    </p>
+                    <p>
+                        <strong>Kantor Sekretariat :</strong><br>
+                        Jl. Jatingaleh 03 RT 01 RW 04 No. 18, Kel. Jatingaleh, Kec. Candisari, Kota Semarang
+                    </p>
+                    <p>
+                        <strong>Kantor Cabang:</strong><br>
+                        Griya Sadewa 2, Jl. Pucang Argo Raya, Pilang, Batursari, Kec. Mranggen, Kabupaten Demak, Jawa Tengah 59567
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h3>Navigasi</h3>
+                    <ul>
+                        <li><a href="index.html#tentang-kami">Tentang Kami</a></li>
+                        <li><a href="index.html#area-praktik">Area Praktik</a></li>
+                        <li><a href="index.html#tim-kami">Tim Kami</a></li>
+                        <li><a href="artikel.html">Artikel</a></li>
+                        <li><a href="index.html#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Kontak</h3>
+                    <ul>
+                        <li class="contact-item"><i class="fas fa-phone"></i> <a href="tel:+628112534695">+62 811 253 4695</a></li>
+                        <li class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:lbh.ratuadilsemarang@gmail.com">lbh.ratuadilsemarang@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Ikuti Kami</h3>
+                    <div class="footer-socials">
+                        <a href="https://web.facebook.com/profile.php?id=61575503973615" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/lbh_ratuadilsmg" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@lbh.ratuadil" target="_blank" aria-label="Tiktok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LBH Ratu Adil Semarang. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/628112534695" class="whatsapp-float" target="_blank" aria-label="Hubungi via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // --- Kode untuk menu mobile ---
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { header.classList.add('scrolled'); } 
+            else { header.classList.remove('scrolled'); }
+        });
+
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navToggle.querySelector('i').classList.toggle('fa-bars');
+            navToggle.querySelector('i').classList.toggle('fa-times');
+            document.body.classList.toggle('nav-open');
+        });
+
+        // --- Logika untuk Tombol Share ---
+        const pageUrl = window.location.href;
+        const articleTitleElement = document.getElementById('articleTitle');
+        const articleTitle = articleTitleElement ? articleTitleElement.innerText : document.title;
+        const encodedTitle = encodeURIComponent(articleTitle);
+
+        const shareFacebook = document.getElementById('shareFacebook');
+        if(shareFacebook) shareFacebook.href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+
+        const shareTwitter = document.getElementById('shareTwitter');
+        if(shareTwitter) shareTwitter.href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodedTitle}`;
+        
+        const shareWhatsapp = document.getElementById('shareWhatsapp');
+        if(shareWhatsapp) shareWhatsapp.href = `https://api.whatsapp.com/send?text=${encodedTitle}%20${encodeURIComponent(pageUrl)}`;
+
+        const copyLinkBtn = document.getElementById('copyLinkBtn');
+        const copyLinkText = document.getElementById('copyLinkText');
+        if(copyLinkBtn && copyLinkText) {
+            copyLinkBtn.addEventListener('click', () => {
+                navigator.clipboard.writeText(pageUrl).then(() => {
+                    copyLinkText.innerText = 'Disalin!';
+                    copyLinkBtn.style.backgroundColor = '#28a745';
+                    setTimeout(() => {
+                        copyLinkText.innerText = 'Salin Link';
+                        copyLinkBtn.style.backgroundColor = '';
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Gagal menyalin link: ', err);
+                    copyLinkText.innerText = 'Gagal';
+                });
+            });
+        }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: "artikel"
+    label: "Artikel Hukum"
+    folder: "articles"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - {label: "Judul Artikel", name: "title", widget: "string", hint: "Tulis judul yang menarik dan relevan."}
+      - {label: "Tanggal Publikasi", name: "date", widget: "datetime"}
+      - {label: "Penulis", name: "author", widget: "string", default: "Tim LBH Ratu Adil", hint: "Nama penulis artikel ini."}
+      - {label: "Kategori", name: "category", widget: "string", default: "Hukum Umum", hint: "Contoh: Hukum Pidana, Hukum Perdata, Berita"}
+      - {label: "Gambar Utama (Thumbnail)", name: "thumbnail", widget: "image", hint: "Pilih gambar utama yang akan muncul di daftar artikel."}
+      - {label: "Ringkasan (Summary)", name: "summary", widget: "text", hint: "Tulis 1-2 kalimat ringkasan untuk tampil di halaman daftar artikel."}
+      
+      # --- BAGIAN YANG DIPERBAIKI ---
+      - label: "Konten Lengkap"
+        name: "body"
+        widget: "markdown"
+        required: true
+        # Baris "modes: ["raw"]" sudah dihapus dari sini
+        hint: "Tulis isi artikel lengkap di sini. Gunakan tombol di atas untuk format."
+      # ---------------------------
+
+      - {label: "Layout", name: "layout", widget: "hidden", default: "artikel.njk"}
+      - {label: "Tags", name: "tags", widget: "hidden", default: "artikel"}

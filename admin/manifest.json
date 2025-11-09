@@ -1,0 +1,21 @@
+{
+    "name": "CMS Konten - LBH Ratu Adil",
+    "short_name": "CMS LBH",
+    "description": "Dasbor Admin untuk mengelola konten website LBH Ratu Adil.",
+    "start_url": "/admin/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0047AB",
+    "icons": [
+      {
+        "src": "icon-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
